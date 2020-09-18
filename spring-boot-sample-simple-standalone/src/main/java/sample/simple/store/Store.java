@@ -31,11 +31,8 @@ public class Store implements IJustHaveALook, ILane, IFastLane{
 	
 	@Override
 	public void oneShotOrder(String refArticle, int quantite, String numCB) {
-		if (isAvailable(refArticle, quantite)) {
-			
-		}else {
-			System.out.println("not available");
-		}
+		addItemToCart(refArticle, quantite);
+		pay(numCB);
 	}
 	@Override
 	public void addItemToCart(String refArticle, int quantite) {
