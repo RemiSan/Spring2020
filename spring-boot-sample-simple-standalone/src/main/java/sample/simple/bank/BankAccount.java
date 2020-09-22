@@ -1,10 +1,29 @@
 package sample.simple.bank;
 
-public class BankAccount {
+import java.io.Serializable;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
+
+@Entity
+@Table(name = "bankaccount")
+public class BankAccount implements Serializable{
+
+	private static final long serialVersionUID = 6364599096915453660L;
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private String numCB;
+	
+	@NotNull
 	private float money;
 
+	public BankAccount() {}
+	
 	public BankAccount(String numCB, float money) {
 		super();
 		this.numCB = numCB;
