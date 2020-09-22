@@ -17,9 +17,12 @@ public class Client implements IRun {
 	@Autowired
 	IJustHaveALook ijustlook;
 	
+	String numCB = "compte1";
+	
 	@Override
 	public void run() {		
-		System.out.println(ijustlook.getPrice("ref1"));
+		ifast.oneShotOrder("ref1", 2, numCB);
+		ijustlook.isAvailable("ref1", 2);
 	}
 
 }

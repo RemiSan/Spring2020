@@ -22,7 +22,6 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import sample.simple.client.IRun;
-import sample.simple.service.HelloWorldService;
 
 @SpringBootApplication
 public class SampleSimpleApplication implements CommandLineRunner {
