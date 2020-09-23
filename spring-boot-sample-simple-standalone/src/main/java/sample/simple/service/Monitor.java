@@ -13,8 +13,5 @@ public class Monitor {
 	public void logServiceAccess(JoinPoint joinPoint) {
 		System.out.println("Before: " + joinPoint);
 	}
-
-	
-	//TODO add security pointcuts ??
 	
 }

@@ -1,12 +1,10 @@
 package sample.simple.bank;
 
-import javax.validation.constraints.NotNull;
 
 public class BankAccount{
 	
 	private String numCB;
 	
-	@NotNull
 	private float money;
 
 	public BankAccount() {}
